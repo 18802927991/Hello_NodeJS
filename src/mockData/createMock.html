@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mock入门案例</title>
+  <script src="./mock-min.js"></script>
+</head>
+<body>
+  <div id="app1">
+  </div>
+</body>
+<script>
+  var data = Mock.mock({
+    //list是一个数组，包含5个元素
+    'list|5':[
+        {
+            'id':1,
+            'name':'测试',
+            "hobby" : "音乐，跑步，舞蹈"
+        }
+    ]
+  })
+  // 每一个层级比上一个多2个空格
+  console.log(JSON.stringify(data,null,2 ))
+</script>
+</html>
